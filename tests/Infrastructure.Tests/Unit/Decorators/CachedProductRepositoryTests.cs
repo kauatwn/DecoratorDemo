@@ -14,11 +14,7 @@ public class CachedProductRepositoryTests
 
     private const string AllProductsCacheKey = "all-products";
     private static readonly TimeSpan DefaultExpiration = TimeSpan.FromSeconds(30);
-    private static readonly IReadOnlyCollection<Product> CachedProducts =
-    [
-        new(1, "Product 1", 10),
-        new(2, "Product 2", 20)
-    ];
+    private static readonly IReadOnlyCollection<Product> CachedProducts = [new(id: 1, name: "Product 1", price: 10)];
 
     public CachedProductRepositoryTests()
     {
@@ -64,7 +60,7 @@ public class CachedProductRepositoryTests
     public void ShouldRemoveCacheWhenNewProductIsAdded()
     {
         // Arrange
-        Product product = new(1, "Product", 10);
+        Product product = new(id: 1, name: "Product 1", price: 10);
 
         // Act
         _cachedRepository.Add(product);
