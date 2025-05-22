@@ -5,17 +5,14 @@ namespace Infrastructure.Tests.Integration.Services;
 
 public class MemoryCacheServiceIntegrationTests : IDisposable
 {
-    private readonly MemoryCache _memoryCache;
+    private readonly MemoryCache _memoryCache = new(new MemoryCacheOptions());
     private readonly MemoryCacheService _cacheService;
 
     private static readonly TimeSpan TestDefaultExpiration = TimeSpan.FromMilliseconds(500);
     private static readonly TimeSpan BufferTime = TimeSpan.FromMilliseconds(100);
 
-    public MemoryCacheServiceIntegrationTests()
-    {
-        _memoryCache = new MemoryCache(new MemoryCacheOptions());
+    public MemoryCacheServiceIntegrationTests() =>
         _cacheService = new MemoryCacheService(_memoryCache, TestDefaultExpiration);
-    }
 
     [Fact]
     public void ShouldStoreValueInCacheWhenSetIsCalled()

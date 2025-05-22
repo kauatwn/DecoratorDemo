@@ -16,10 +16,8 @@ public class CachedProductRepositoryTests
     private static readonly TimeSpan DefaultExpiration = TimeSpan.FromSeconds(30);
     private static readonly IReadOnlyCollection<Product> CachedProducts = [new(id: 1, name: "Product 1", price: 10)];
 
-    public CachedProductRepositoryTests()
-    {
+    public CachedProductRepositoryTests() =>
         _cachedRepository = new CachedProductRepository(_mockDecorated.Object, _mockCache.Object);
-    }
 
     [Fact]
     public async Task ShouldReturnCachedProductsWhenCacheIsAvailable()
