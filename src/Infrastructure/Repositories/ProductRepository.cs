@@ -7,16 +7,16 @@ public class ProductRepository : IProductRepository
 {
     private readonly List<Product> _products =
     [
-        new(1, "Notebook", 5000),
-        new(2, "Smartphone", 3000),
-        new(3, "Tablet", 2000),
-        new(4, "Monitor", 1500),
-        new(5, "Teclado", 200),
-        new(6, "Mouse", 100),
-        new(7, "Impressora", 800),
-        new(8, "Cadeira", 1200),
-        new(9, "Mesa", 1500),
-        new(10, "Fone de Ouvido", 300)
+        new(id: 1, name: "Notebook", price: 5_000m),
+        new(id: 2, name: "Smartphone", price: 3_000m),
+        new(id: 3, name: "Tablet", price: 2_000m),
+        new(id: 4, name: "Monitor", price: 1_500m),
+        new(id: 5, name: "Teclado", price: 200m),
+        new(id: 6, name: "Mouse", price: 100m),
+        new(id: 7, name: "Impressora", price: 800m),
+        new(id: 8, name: "Cadeira", price: 1_200m),
+        new(id: 9, name: "Mesa", price: 1_500),
+        new(id: 10, name: "Fone de Ouvido", price: 300m)
     ];
 
     public void Add(Product product) => _products.Add(product);
