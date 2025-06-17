@@ -1,6 +1,6 @@
-﻿using Application.Abstractions;
+﻿using Application.Interfaces.UseCases;
 using Domain.Entities;
-using Domain.Interfaces;
+using Domain.Interfaces.Repositories;
 
 namespace Application.UseCases;
 

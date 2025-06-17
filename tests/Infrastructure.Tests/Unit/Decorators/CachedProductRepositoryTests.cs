@@ -1,5 +1,6 @@
-﻿using Domain.Entities;
-using Domain.Interfaces;
+﻿using Application.Interfaces.Services;
+using Domain.Entities;
+using Domain.Interfaces.Repositories;
 using Infrastructure.Decorators;
 using Moq;
 

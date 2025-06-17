@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces;
+﻿using Application.Interfaces.Services;
+using Domain.Interfaces.Repositories;
 using Infrastructure.Decorators;
 using Infrastructure.Repositories;
 using Infrastructure.Services;
@@ -24,7 +25,7 @@ public static class DependencyInjectionExtensions
     {
         services.AddSingleton<IProductRepository>(provider =>
         {
-            var repository = new ProductRepository();
+            ProductRepository repository = new();
             var cache = provider.GetRequiredService<ICacheService>();
 
             return new CachedProductRepository(repository, cache);

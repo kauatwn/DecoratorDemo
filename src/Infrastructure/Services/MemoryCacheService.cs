@@ -1,4 +1,4 @@
-﻿using Domain.Interfaces;
+﻿using Application.Interfaces.Services;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Infrastructure.Services;

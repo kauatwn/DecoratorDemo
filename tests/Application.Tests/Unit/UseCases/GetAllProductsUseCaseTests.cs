@@ -1,6 +1,6 @@
 ﻿using Application.UseCases;
 using Domain.Entities;
-using Domain.Interfaces;
+using Domain.Interfaces.Repositories;
 using Moq;
 
 namespace Application.Tests.Unit.UseCases;

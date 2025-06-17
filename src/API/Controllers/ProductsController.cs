@@ -1,4 +1,4 @@
-﻿using Application.Abstractions;
+﻿using Application.Interfaces.UseCases;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,8 +10,10 @@ public class ProductsController : ControllerBase
 {
     [HttpGet]
     [ProducesResponseType<IEnumerable<Product>>(StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<Product>>> GetAllProducts(IGetAllProductsUseCase useCase) =>
-        Ok(await useCase.Execute());
+    public async Task<ActionResult<IEnumerable<Product>>> GetAllProducts(IGetAllProductsUseCase useCase)
+    {
+        return Ok(await useCase.Execute());
+    }
 
     [HttpPost]
     [ProducesResponseType<Product>(StatusCodes.Status201Created)]

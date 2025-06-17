@@ -1,4 +1,4 @@
-﻿using Application.Abstractions;
+﻿using Application.Interfaces.UseCases;
 using Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -6,7 +6,10 @@ namespace Application.Extensions;
 
 public static class DependencyInjectionExtensions
 {
-    public static void AddApplication(this IServiceCollection services) => AddUseCases(services);
+    public static void AddApplication(this IServiceCollection services)
+    {
+        AddUseCases(services);
+    }
 
     private static void AddUseCases(IServiceCollection services)
     {
