@@ -5,19 +5,19 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{34D67933-D524-43F4-BC3C-69336F5CFEFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator_Demo.Domain", "src\Decorator_Demo.Domain\Decorator_Demo.Domain.csproj", "{34D67933-D524-43F4-BC3C-69336F5CFEFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{5A6D3A68-40F1-4D16-9BAC-9F7D2F4936FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator_Demo.Application", "src\Decorator_Demo.Application\Decorator_Demo.Application.csproj", "{5A6D3A68-40F1-4D16-9BAC-9F7D2F4936FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{28B9FFE2-62C5-4DC9-A6FA-78AD2609F70C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator_Demo.Infrastructure", "src\Decorator_Demo.Infrastructure\Decorator_Demo.Infrastructure.csproj", "{28B9FFE2-62C5-4DC9-A6FA-78AD2609F70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "src\API\API.csproj", "{4E3FD353-488F-489E-84CB-CFC2D6E17B7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator_Demo.API", "src\Decorator_Demo.API\Decorator_Demo.API.csproj", "{4E3FD353-488F-489E-84CB-CFC2D6E17B7A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B9D5F319-514D-449A-9329-6F1ECE1D55E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Tests", "tests\Application.Tests\Application.Tests.csproj", "{E613E844-9434-4854-BA04-431E12697EF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator_Demo.Application.Tests", "tests\Decorator_Demo.Application.Tests\Decorator_Demo.Application.Tests.csproj", "{E613E844-9434-4854-BA04-431E12697EF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Tests", "tests\Infrastructure.Tests\Infrastructure.Tests.csproj", "{8FE48A17-F4D5-48D0-8DB4-2B1B10C7E923}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator_Demo.Infrastructure.Tests", "tests\Decorator_Demo.Infrastructure.Tests\Decorator_Demo.Infrastructure.Tests.csproj", "{8FE48A17-F4D5-48D0-8DB4-2B1B10C7E923}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
