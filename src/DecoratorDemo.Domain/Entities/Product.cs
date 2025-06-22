@@ -2,7 +2,7 @@
 
 public class Product(int id, string name, decimal price)
 {
-    public int Id { get; } = id;
-    public string Name { get; } = name;
-    public decimal Price { get; } = price;
+    public int Id { get; init; } = id;
+    public string Name { get; init; } = name;
+    public decimal Price { get; init; } = price;
 }
