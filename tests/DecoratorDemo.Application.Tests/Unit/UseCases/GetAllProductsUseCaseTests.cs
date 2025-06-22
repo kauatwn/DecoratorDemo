@@ -19,7 +19,7 @@ public class GetAllProductsUseCaseTests
         List<Product> products = [
             new(id: 1, name: "Notebook", price: 5_000m),
             new(id: 2, name: "Smartphone", price: 3_000m),
-            new(id : 3, name : "Tablet", price : 2_000m)
+            new(id: 3, name: "Tablet", price: 2_000m)
         ];
 
         _mockRepository.Setup(r => r.GetAllAsync()).ReturnsAsync(products);
@@ -28,8 +28,6 @@ public class GetAllProductsUseCaseTests
         IEnumerable<Product> result = await _useCase.Execute();
 
         // Assert
-        Assert.NotNull(result);
-
-        _mockRepository.Verify(r => r.GetAllAsync(), Times.Once);
+        Assert.Equal(products, result);
     }
 }
