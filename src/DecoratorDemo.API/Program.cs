@@ -1,4 +1,5 @@
 using DecoratorDemo.Application.Extensions;
+using DecoratorDemo.Infrastructure.Context;
 using DecoratorDemo.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,12 @@ builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<InMemoryAppDbContext>();
+    db.Database.EnsureCreated();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
