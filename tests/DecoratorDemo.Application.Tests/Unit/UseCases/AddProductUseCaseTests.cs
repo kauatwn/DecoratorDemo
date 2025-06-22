@@ -22,10 +22,6 @@ public class AddProductUseCaseTests
         _useCase.Execute(product);
 
         // Assert
-        _mockRepository.Verify(r => r.Add(It.Is<Product>(p => 
-            p.Id == product.Id && 
-            p.Name == product.Name && 
-            p.Price == product.Price)), 
-        Times.Once);
+        _mockRepository.Verify(r => r.Add(product), Times.Once);
     }
 }
