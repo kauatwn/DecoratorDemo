@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DecoratorDemo.Infrastructure.Repositories;
 
-public class ProductRepository(InMemoryAppDbContext context, bool simulateLatency = true) : IProductRepository
+public class ProductRepository(InMemoryAppDbContext context) : IProductRepository
 {
     public void Add(Product product)
     {
@@ -15,11 +15,8 @@ public class ProductRepository(InMemoryAppDbContext context, bool simulateLatenc
 
     public async Task<IReadOnlyCollection<Product>> GetAllAsync()
     {
-        if (simulateLatency)
-        {
-            Console.WriteLine("--> Simulando latência de banco real...");
-            await Task.Delay(TimeSpan.FromSeconds(2));
-        }
+        Console.WriteLine("--> Simulando latência de banco real...");
+        await Task.Delay(TimeSpan.FromSeconds(2));
 
         return await context.Products.AsNoTracking().ToListAsync();
     }
