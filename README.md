@@ -78,7 +78,7 @@ Após executar os comandos acima, a API estará disponível em `http://localhost
     dotnet run
     ```
 
-Após rodar a aplicação, a API ficará acessível em `http://localhost:5197`.
+Após rodar a aplicação, a API ficará acessível em `http://localhost:5025`.
 
 ## Estrutura do Projeto
 
